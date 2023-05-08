@@ -26,14 +26,11 @@ h1 {
   font-style: italic;
 }
 
-nav {
+nav a:link {
+  margin-right: 30px;
+  margin-top: 20px;
+  display: inline-block;
   font-size: 18px;
-}
-
-.main-header a {
-  margin-top: 80px;
-  margin-left: 50px;
-  font-size: 20px;
 }
 
 article {
@@ -104,8 +101,9 @@ header p {
 }
 
 .main-header {
+  text-align: center;
   background-color: #f7f7f7;
-  padding: 20px 40px;
+  padding: 20px 0;
   margin-bottom: 60px;
 }
 
