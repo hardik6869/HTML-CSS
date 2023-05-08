@@ -1,5 +1,6 @@
 body{
   font-family: sans-serif;
+  color: #444;
   padding: 0;
   margin: 0;
 }
@@ -9,9 +10,16 @@ h1,h2,h3{
 }
 
 h1 {
+  padding: 20px;
+  border-top:5px #1098ad solid;
     color: #1098ad;
     font-size: 26px;
     font-style: italic;
+  }
+
+  nav{
+    margin-left: 50px;
+    font-size: 20px;
   }
 
 strong{
