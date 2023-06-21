@@ -34,6 +34,7 @@ Paragraph default: 1.6
 - Greys:
 #555
 #333  
+#6f6f6f (Light grey allowed on #fdf2e9)
 
 --- 05 SHADOWS 
 
@@ -80,8 +81,6 @@ body {
   display: grid;
   column-gap: 6.4rem;
   row-gap: 9.6rem;
-
-  align-items: center;
 }
 
 .grid-2-cols {
