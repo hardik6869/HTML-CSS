@@ -1,9 +1,11 @@
+/////////////////////////////////////////////////////////////////////
 // Set Current Year
 const yearEl = document.querySelector(".year");
 const currentYear = new Date().getFullYear();
 
 yearEl.textContent = currentYear;
 
+/////////////////////////////////////////////////////////////////////
 // Make Mobile Navigation
 const btnNavEl = document.querySelector(".btn-mobile-nav");
 const headerEl = document.querySelector(".header");
@@ -12,6 +14,7 @@ btnNavEl.addEventListener("click", () => {
   headerEl.classList.toggle("nav-open");
 });
 
+/////////////////////////////////////////////////////////////////////
 // Smooth Scrolling Animation
 const allLinks = document.querySelectorAll("a:link");
 allLinks.forEach((link) => {
@@ -39,3 +42,28 @@ allLinks.forEach((link) => {
     }
   });
 });
+
+/////////////////////////////////////////////////////////////////////
+//Sticky Navigation
+
+const sectionHeroEl = document.querySelector(".section-hero");
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    const ent = entries[0];
+
+    if (!ent.isIntersecting) {
+      document.body.classList.add("sticky");
+    }
+
+    if (ent.isIntersecting) {
+      document.body.classList.remove("sticky");
+    }
+  },
+  {
+    root: null,
+    threshold: 0,
+    rootMargin: "-80px",
+  }
+);
+observer.observe(sectionHeroEl);
